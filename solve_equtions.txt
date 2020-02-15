@@ -1,0 +1,16 @@
+%% Part 1 Initial data
+% define symbolic variable 
+syms x
+% Define a symbolic function
+f(x)=-x^3+x^2-x+5;
+
+%% Part 2 Solve
+% Plot the function
+fplot(f,[0,10])
+% Solve equations
+symEq=(f(x)==0);
+sols=solve(symEq);
+
+%% Part 3 Results
+zero_crossing_complet=double(sols)
+zero_crossing_real=double(sols(1,1))
